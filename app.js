@@ -6,7 +6,8 @@
 var express = require('express'),
     ArticleProvider = require('./articleprovider-memory').ArticleProvider,
     articleProvider = new ArticleProvider(),
-    app = module.exports = express.createServer();
+    app = module.exports = express.createServer(),
+    port = process.env.PORT || 3000;
 
 // Configuration
 
@@ -77,6 +78,6 @@ app.post('/blog/new', function(req, res){
 //        });
 // });
 
-app.listen(3000, function(){
+app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
