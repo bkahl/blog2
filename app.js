@@ -6,7 +6,7 @@
 var express           = require('express'),
     config            = require('./config'),
     //ArticleProvider   = require('./articleprovider-mongodb').ArticleProvider,
-    ArticleProvider   = require('./articleprovider-mongodb').ArticleProvider,
+    ArticleProvider   = require('./articleprovider-mongodb'),
     
     articleProvider = new ArticleProvider(config),
     app = module.exports = express.createServer(),
